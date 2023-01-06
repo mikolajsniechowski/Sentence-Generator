@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <title>Sentence Generator</title>
+  <link href="src/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body> 
+  <header>
+    <app id="app">
+      <div id="app-header">
+        <img src="https://i.imgur.com/pEds07b.png" id="logo" alt="logo" />
+        <h2>Sentence generator based on genetic algoritm</h2>
+      </div>
+    </app>
+  </header>
+  <main>
+    <div>
+      <div>
+        <input type="text" value="random sentence" id="inputtext">
+        <button onclick="startsequence()">START</button>
+        <button onclick="stop()">STOP</button>
+      </div>
+      <div>
+        <b>Target: <span id="target"></span></b>
+      </div>
+      <div>
+       <b>Best result: <span id="best"></span></b> 
+      </div>  
+      <div>
+        <h2> Parameters</h2>
+        <ul>
+          <li>
+            mutation rate : <span id="mutationRate"></span>
+          </li>
+          <li>
+            average fitness: <span id="avgFitness"></span>
+          </li>
+          <li>
+            total population: <span id="maxPop"></span>
+          </li>
+          <li>
+            total generations : <span id="counter"></span>
+          </li>
+        </ul>
+      </div>  
+    </div>
+    <div>
+      <center><h2>Whole population</h2></center>
+      <div id="genetic"></div>
+    </div>
+    
+    
+  </main>
+  <script type="text/javascript" src="src/script.js"></script>
+</body>
+
+</html>
